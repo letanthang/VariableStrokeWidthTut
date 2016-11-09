@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "FinalAlgView.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +17,14 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.backgroundColor = [UIColor whiteColor];
+    UIViewController *vc = [[UIViewController alloc] init];
+    self.window.rootViewController = vc;
+    vc.view = [[FinalAlgView alloc] initWithFrame:self.window.bounds];
+    vc.view.frame = self.window.bounds;
+    vc.view.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
     return YES;
 }
 

@@ -14,6 +14,9 @@
 		C74E7CA31DD2E0A30024BFE0 /* VariableStrokeWidthTut.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C74E7CA11DD2E0A30024BFE0 /* VariableStrokeWidthTut.xcdatamodeld */; };
 		C74E7CA51DD2E0A30024BFE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C74E7CA41DD2E0A30024BFE0 /* Assets.xcassets */; };
 		C74E7CA81DD2E0A30024BFE0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C74E7CA61DD2E0A30024BFE0 /* LaunchScreen.storyboard */; };
+		C74E7CB11DD2E0F50024BFE0 /* NaiveVarWidthView.m in Sources */ = {isa = PBXBuildFile; fileRef = C74E7CB01DD2E0F50024BFE0 /* NaiveVarWidthView.m */; };
+		C74E7CB41DD2F7A00024BFE0 /* NaiveVarWidthBGRenderingView.m in Sources */ = {isa = PBXBuildFile; fileRef = C74E7CB31DD2F7A00024BFE0 /* NaiveVarWidthBGRenderingView.m */; };
+		C74E7CB71DD2FB260024BFE0 /* FinalAlgView.m in Sources */ = {isa = PBXBuildFile; fileRef = C74E7CB61DD2FB260024BFE0 /* FinalAlgView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,12 @@
 		C74E7CA41DD2E0A30024BFE0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C74E7CA71DD2E0A30024BFE0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C74E7CA91DD2E0A30024BFE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C74E7CAF1DD2E0F50024BFE0 /* NaiveVarWidthView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NaiveVarWidthView.h; sourceTree = "<group>"; };
+		C74E7CB01DD2E0F50024BFE0 /* NaiveVarWidthView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NaiveVarWidthView.m; sourceTree = "<group>"; };
+		C74E7CB21DD2F7A00024BFE0 /* NaiveVarWidthBGRenderingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NaiveVarWidthBGRenderingView.h; sourceTree = "<group>"; };
+		C74E7CB31DD2F7A00024BFE0 /* NaiveVarWidthBGRenderingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NaiveVarWidthBGRenderingView.m; sourceTree = "<group>"; };
+		C74E7CB51DD2FB260024BFE0 /* FinalAlgView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FinalAlgView.h; sourceTree = "<group>"; };
+		C74E7CB61DD2FB260024BFE0 /* FinalAlgView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FinalAlgView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +53,8 @@
 		C74E7C891DD2E0A30024BFE0 = {
 			isa = PBXGroup;
 			children = (
+				C74E7CAF1DD2E0F50024BFE0 /* NaiveVarWidthView.h */,
+				C74E7CB01DD2E0F50024BFE0 /* NaiveVarWidthView.m */,
 				C74E7C941DD2E0A30024BFE0 /* VariableStrokeWidthTut */,
 				C74E7C931DD2E0A30024BFE0 /* Products */,
 			);
@@ -62,6 +73,8 @@
 			children = (
 				C74E7C981DD2E0A30024BFE0 /* AppDelegate.h */,
 				C74E7C991DD2E0A30024BFE0 /* AppDelegate.m */,
+				C74E7CB21DD2F7A00024BFE0 /* NaiveVarWidthBGRenderingView.h */,
+				C74E7CB31DD2F7A00024BFE0 /* NaiveVarWidthBGRenderingView.m */,
 				C74E7C9B1DD2E0A30024BFE0 /* ViewController.h */,
 				C74E7C9C1DD2E0A30024BFE0 /* ViewController.m */,
 				C74E7C9E1DD2E0A30024BFE0 /* Main.storyboard */,
@@ -70,6 +83,8 @@
 				C74E7CA91DD2E0A30024BFE0 /* Info.plist */,
 				C74E7CA11DD2E0A30024BFE0 /* VariableStrokeWidthTut.xcdatamodeld */,
 				C74E7C951DD2E0A30024BFE0 /* Supporting Files */,
+				C74E7CB51DD2FB260024BFE0 /* FinalAlgView.h */,
+				C74E7CB61DD2FB260024BFE0 /* FinalAlgView.m */,
 			);
 			path = VariableStrokeWidthTut;
 			sourceTree = "<group>";
@@ -156,8 +171,11 @@
 			files = (
 				C74E7C9D1DD2E0A30024BFE0 /* ViewController.m in Sources */,
 				C74E7C9A1DD2E0A30024BFE0 /* AppDelegate.m in Sources */,
+				C74E7CB11DD2E0F50024BFE0 /* NaiveVarWidthView.m in Sources */,
 				C74E7CA31DD2E0A30024BFE0 /* VariableStrokeWidthTut.xcdatamodeld in Sources */,
 				C74E7C971DD2E0A30024BFE0 /* main.m in Sources */,
+				C74E7CB71DD2FB260024BFE0 /* FinalAlgView.m in Sources */,
+				C74E7CB41DD2F7A00024BFE0 /* NaiveVarWidthBGRenderingView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
