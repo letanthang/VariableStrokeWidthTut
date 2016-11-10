@@ -44,7 +44,9 @@ typedef struct
 
 - (void) initHelper {
     self.color = [UIColor blackColor];
-    self.bgColor = [UIColor whiteColor];
+    self.opaque = false;
+    //self.bgColor = [UIColor whiteColor];
+    //self.backgroundColor = [UIColor blueColor];
     [self setMultipleTouchEnabled:NO];
     drawingQueue = dispatch_queue_create("drawingQueue", NULL);
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(eraseDrawing:)];
@@ -144,12 +146,13 @@ typedef struct
                 // Suggestion: Apply smoothing on the shared line segment of the two adjacent offsetPaths
                 
             }
-            UIGraphicsBeginImageContextWithOptions(bounds.size, YES, 0.0);
+            UIGraphicsBeginImageContextWithOptions(bounds.size, NO, 0.0);
+        
             
             if (!incrementalImage)
             {
                 UIBezierPath *rectpath = [UIBezierPath bezierPathWithRect:self.bounds];
-                [[UIColor whiteColor] setFill];
+                [[UIColor clearColor] setFill];
                 [rectpath fill];
             }
             [incrementalImage drawAtPoint:CGPointZero];
@@ -174,6 +177,8 @@ typedef struct
 - (void)drawRect:(CGRect)rect
 {
     [incrementalImage drawInRect:rect];
+    
+    //[incrementalImage drawInRect:rect blendMode:kCGBlendModeClear alpha:1];
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event

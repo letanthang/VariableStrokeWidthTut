@@ -22,9 +22,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1RP-at-Zub" customClass="FinalAlgView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="coO-Yq-GIf">
                                 <rect key="frame" x="16" y="20" width="343" height="603"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1RP-at-Zub" customClass="FinalAlgView">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="598"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="1RP-at-Zub" secondAttribute="bottom" constant="5" id="IhI-EM-dT6"/>
+                                    <constraint firstItem="1RP-at-Zub" firstAttribute="top" secondItem="coO-Yq-GIf" secondAttribute="top" id="XDH-S6-eoK"/>
+                                    <constraint firstAttribute="trailing" secondItem="1RP-at-Zub" secondAttribute="trailing" id="mPL-Tb-Ds8"/>
+                                    <constraint firstItem="1RP-at-Zub" firstAttribute="leading" secondItem="coO-Yq-GIf" secondAttribute="leading" id="yDU-MQ-Mh0"/>
+                                </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z9c-IH-sE5">
                                 <rect key="frame" x="169.5" y="632" width="35" height="35"/>
@@ -81,21 +93,22 @@
                             <constraint firstAttribute="trailingMargin" secondItem="afr-0K-Jj4" secondAttribute="trailing" constant="16" id="NdO-vY-Saa"/>
                             <constraint firstItem="z9c-IH-sE5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PfG-gE-I9c"/>
                             <constraint firstItem="z9c-IH-sE5" firstAttribute="leading" secondItem="xCg-Wh-hAW" secondAttribute="trailing" constant="8" id="R07-7l-a0p"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="1RP-at-Zub" secondAttribute="trailing" id="SIc-jY-yAR"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="z9c-IH-sE5" secondAttribute="bottom" id="Vzp-Bh-PWk"/>
                             <constraint firstItem="3kr-nR-ttC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="XI0-fg-tEh"/>
-                            <constraint firstItem="1RP-at-Zub" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="dZT-Kq-2US"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="coO-Yq-GIf" secondAttribute="leading" id="f68-ow-bwi"/>
                             <constraint firstItem="xCg-Wh-hAW" firstAttribute="centerY" secondItem="z9c-IH-sE5" secondAttribute="centerY" id="jcu-bH-1te"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="afr-0K-Jj4" secondAttribute="bottom" id="jjW-ak-7x4"/>
-                            <constraint firstItem="1RP-at-Zub" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="lWf-jK-Ub4"/>
                             <constraint firstItem="4x4-5d-r7k" firstAttribute="leading" secondItem="3kr-nR-ttC" secondAttribute="trailing" constant="8" id="lx2-5N-yC1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="coO-Yq-GIf" secondAttribute="trailing" id="owI-3V-d2A"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="coO-Yq-GIf" secondAttribute="bottom" constant="44" id="tMS-nZ-jrC"/>
                             <constraint firstItem="3kr-nR-ttC" firstAttribute="centerY" secondItem="4x4-5d-r7k" secondAttribute="centerY" id="uqa-qH-MSj"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="1RP-at-Zub" secondAttribute="bottom" constant="44" id="y2e-dg-KOw"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="4x4-5d-r7k" secondAttribute="bottom" id="yP5-CN-une"/>
+                            <constraint firstItem="coO-Yq-GIf" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="zC0-vo-AOF"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="colorButton" destination="z9c-IH-sE5" id="G8S-ZP-TYW"/>
+                        <outlet property="containerView" destination="coO-Yq-GIf" id="D6z-Cy-mpT"/>
                         <outlet property="padView" destination="1RP-at-Zub" id="KLR-oK-kXM"/>
                         <outlet property="saveButton" destination="afr-0K-Jj4" id="0e6-Rz-hwt"/>
                     </connections>

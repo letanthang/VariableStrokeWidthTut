@@ -14,6 +14,8 @@
 
 @property (strong, nonatomic) DRColorPickerColor* color;
 @property (weak, nonatomic) DRColorPickerViewController* colorPickerVC;
+@property (weak, nonatomic) IBOutlet UIView *containerView;
+
 @property (weak, nonatomic) IBOutlet FinalAlgView *padView;
 
 @property (weak, nonatomic) IBOutlet UIButton *colorButton;
@@ -30,14 +32,12 @@
 //    self.view.backgroundColor = [UIColor lightGrayColor];
     
 //    self.padView = [[FinalAlgView alloc] initWithFrame:self.padView.bounds];
-    self.padView.backgroundColor = [UIColor whiteColor];
+    //self.padView.backgroundColor = [UIColor whiteColor];
     self.padView.bgColor = [UIColor whiteColor];
     
     self.saveButton.layer.borderColor = [[UIColor blueColor] CGColor];
     self.saveButton.layer.borderWidth = 1;
     self.saveButton.layer.cornerRadius = 4;
-    
-    
     
 }
 
@@ -153,8 +153,9 @@
             } else if (sender.tag == 1) {
                 //self.view.backgroundColor = color.rgbColor;
                 sender.backgroundColor = color.rgbColor;
-                self.padView.bgColor = color.rgbColor;
-                [self.padView setFillBG:color.rgbColor];
+                self.containerView.backgroundColor = color.rgbColor;
+                //self.padView.bgColor = color.rgbColor;
+                //[self.padView setFillBG:color.rgbColor];
             }
             
         }
@@ -190,7 +191,9 @@
 
 - (IBAction)saveTapped:(id)sender {
     
-    UIImage *image = [self.padView captureView];
+//    UIImage *image = [self.padView captureView];
+    
+    UIImage *image = [self captureView];
     
     UIImageWriteToSavedPhotosAlbum(image, self, @selector(imageSave:didFinishSavingWithError:contextInfo:), nil);
     
@@ -210,6 +213,20 @@
     
     
     [self presentViewController:ac animated:YES completion:nil];
+    
+}
+
+- (UIImage *)captureView {
+    
+    //hide controls if needed
+    CGRect rect = [self.containerView bounds];
+    
+    UIGraphicsBeginImageContext(rect.size);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    [self.containerView.layer renderInContext:context];
+    UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return img;
     
 }
 
