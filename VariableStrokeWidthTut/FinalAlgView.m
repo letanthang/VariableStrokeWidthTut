@@ -116,6 +116,8 @@ typedef struct
             UIBezierPath *offsetPath = [UIBezierPath bezierPath]; // ................. (2)
             if (bufIdx == 0) return;
             
+            offsetPath.lineWidth = self.lineWidth;
+            
             LineSegment ls[4];
             for ( int i = 0; i < bufIdx; i += 4)
             {

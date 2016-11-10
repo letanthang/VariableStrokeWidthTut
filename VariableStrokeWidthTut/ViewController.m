@@ -20,6 +20,7 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *colorButton;
 @property (weak, nonatomic) IBOutlet UIButton *saveButton;
+@property (weak, nonatomic) IBOutlet UISlider *widthSlider;
 
 @end
 
@@ -228,6 +229,10 @@
     UIGraphicsEndImageContext();
     return img;
     
+}
+- (IBAction)widthSliderChanged:(UISlider *)sender {
+    
+    self.padView.lineWidth = (CGFloat) sender.value;
 }
 
 
