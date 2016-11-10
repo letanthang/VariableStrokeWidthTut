@@ -10,4 +10,10 @@
 
 @interface FinalAlgView : UIView
 
+@property(weak, nonatomic) UIColor *color;
+@property(weak, nonatomic) UIColor *bgColor;
+
+- (UIImage *)captureView;
+- (void) setFillBG: (UIColor *)color;
+
 @end

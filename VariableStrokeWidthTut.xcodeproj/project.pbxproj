@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		32394FC060B7AA2C1A1EF143 /* libPods-VariableStrokeWidthTut.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DAF950DFBDECDFF790510C4 /* libPods-VariableStrokeWidthTut.a */; };
 		C74E7C971DD2E0A30024BFE0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C74E7C961DD2E0A30024BFE0 /* main.m */; };
 		C74E7C9A1DD2E0A30024BFE0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C74E7C991DD2E0A30024BFE0 /* AppDelegate.m */; };
 		C74E7C9D1DD2E0A30024BFE0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C74E7C9C1DD2E0A30024BFE0 /* ViewController.m */; };
@@ -20,6 +21,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2DAF950DFBDECDFF790510C4 /* libPods-VariableStrokeWidthTut.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VariableStrokeWidthTut.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		73BE133CA7F8E0D13229C979 /* Pods-VariableStrokeWidthTut.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VariableStrokeWidthTut.release.xcconfig"; path = "Pods/Target Support Files/Pods-VariableStrokeWidthTut/Pods-VariableStrokeWidthTut.release.xcconfig"; sourceTree = "<group>"; };
+		AB4E151AF63B62E08428C120 /* Pods-VariableStrokeWidthTut.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VariableStrokeWidthTut.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VariableStrokeWidthTut/Pods-VariableStrokeWidthTut.debug.xcconfig"; sourceTree = "<group>"; };
 		C74E7C921DD2E0A30024BFE0 /* VariableStrokeWidthTut.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VariableStrokeWidthTut.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C74E7C961DD2E0A30024BFE0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C74E7C981DD2E0A30024BFE0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -44,12 +48,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32394FC060B7AA2C1A1EF143 /* libPods-VariableStrokeWidthTut.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		14BB9087E34B07FB1D4B531F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AB4E151AF63B62E08428C120 /* Pods-VariableStrokeWidthTut.debug.xcconfig */,
+				73BE133CA7F8E0D13229C979 /* Pods-VariableStrokeWidthTut.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		C74E7C891DD2E0A30024BFE0 = {
 			isa = PBXGroup;
 			children = (
@@ -57,6 +71,8 @@
 				C74E7CB01DD2E0F50024BFE0 /* NaiveVarWidthView.m */,
 				C74E7C941DD2E0A30024BFE0 /* VariableStrokeWidthTut */,
 				C74E7C931DD2E0A30024BFE0 /* Products */,
+				14BB9087E34B07FB1D4B531F /* Pods */,
+				F56EE08D2B7CAD41661AA881 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,6 +113,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		F56EE08D2B7CAD41661AA881 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2DAF950DFBDECDFF790510C4 /* libPods-VariableStrokeWidthTut.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -104,9 +128,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C74E7CAC1DD2E0A30024BFE0 /* Build configuration list for PBXNativeTarget "VariableStrokeWidthTut" */;
 			buildPhases = (
+				4813E08BF71DEDCB131887AD /* [CP] Check Pods Manifest.lock */,
 				C74E7C8E1DD2E0A30024BFE0 /* Sources */,
 				C74E7C8F1DD2E0A30024BFE0 /* Frameworks */,
 				C74E7C901DD2E0A30024BFE0 /* Resources */,
+				1E222D3A137CF0A7882A6633 /* [CP] Embed Pods Frameworks */,
+				4E2A4186BE3B7E7DCBE29CB4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -163,6 +190,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1E222D3A137CF0A7882A6633 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VariableStrokeWidthTut/Pods-VariableStrokeWidthTut-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4813E08BF71DEDCB131887AD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4E2A4186BE3B7E7DCBE29CB4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VariableStrokeWidthTut/Pods-VariableStrokeWidthTut-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C74E7C8E1DD2E0A30024BFE0 /* Sources */ = {
@@ -293,6 +368,7 @@
 		};
 		C74E7CAD1DD2E0A30024BFE0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB4E151AF63B62E08428C120 /* Pods-VariableStrokeWidthTut.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = N7956XYWZ3;
@@ -305,6 +381,7 @@
 		};
 		C74E7CAE1DD2E0A30024BFE0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 73BE133CA7F8E0D13229C979 /* Pods-VariableStrokeWidthTut.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = N7956XYWZ3;

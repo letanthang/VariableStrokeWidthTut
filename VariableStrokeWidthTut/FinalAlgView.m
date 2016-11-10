@@ -31,7 +31,36 @@ typedef struct
     BOOL isFirstTouchPoint;
     LineSegment lastSegmentOfPrev;
     
+    
 }
+
+- (id)init {
+    self = [super init];
+    if (self) {
+        [self initHelper];
+    }
+    return self;
+}
+
+- (void) initHelper {
+    self.color = [UIColor blackColor];
+    self.bgColor = [UIColor whiteColor];
+    [self setMultipleTouchEnabled:NO];
+    drawingQueue = dispatch_queue_create("drawingQueue", NULL);
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(eraseDrawing:)];
+    tap.numberOfTapsRequired = 2; // Tap twice to clear drawing!
+    [self addGestureRecognizer:tap];
+}
+
+- (id)initWithCoder:(NSCoder *)coder
+{
+    self = [super initWithCoder:coder];
+    if (self) {
+        [self initHelper];
+    }
+    return self;
+}
+
 
 - (id)initWithFrame:(CGRect) frame
 {
@@ -124,8 +153,8 @@ typedef struct
                 [rectpath fill];
             }
             [incrementalImage drawAtPoint:CGPointZero];
-            [[UIColor blackColor] setStroke];
-            [[UIColor blackColor] setFill];
+            [self.color setStroke];
+            [self.color setFill];
             [offsetPath stroke]; // ................. (8)
             [offsetPath fill];
             incrementalImage = UIGraphicsGetImageFromCurrentImageContext();
@@ -174,6 +203,28 @@ typedef struct
     yb = y1 + fraction/2 * dx;
     
     return (LineSegment){ (CGPoint){xa, ya}, (CGPoint){xb, yb} };
+    
+}
+
+- (UIImage *)captureView {
+    
+    //hide controls if needed
+    CGRect rect = [self bounds];
+    
+    UIGraphicsBeginImageContext(rect.size);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    [self.layer renderInContext:context];
+    UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return img;
+    
+}
+
+- (void) setFillBG: (UIColor *)color {
+    
+    UIBezierPath *rectpath = [UIBezierPath bezierPathWithRect:self.bounds];
+    [color setFill];
+    [rectpath fill];
     
 }
 
